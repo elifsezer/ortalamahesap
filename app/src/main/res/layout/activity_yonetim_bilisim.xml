@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".YonetimBilisim">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <AutoCompleteTextView
+            android:id="@+id/etYbsDers"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:hint="Ders İsmini Giriniz.."
+            android:backgroundTint="@android:color/transparent"
+            android:textColor="@android:color/white"
+            android:popupBackground="@color/colorAccent"
+            android:textColorHint="@android:color/white"
+            app:layout_constraintEnd_toStartOf="@+id/btnYbsEkle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnYbsEkle"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/btnadd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spnYbsDersKredi"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/colorAccent"
+            android:layout_marginTop="8dp"
+            android:entries="@array/krediler"
+            android:popupBackground="@color/colorAccent"
+            app:layout_constraintEnd_toStartOf="@+id/spnYbsDersNot"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etYbsDers" />
+
+        <Spinner
+            android:id="@+id/spnYbsDersNot"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="8dp"
+            android:entries="@array/tumNotlar"
+            app:layout_constraintEnd_toStartOf="@+id/btnYbsEkle"
+            android:popupBackground="@color/colorAccent"
+            android:backgroundTint="@color/colorAccent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/spnYbsDersKredi"
+            app:layout_constraintTop_toBottomOf="@+id/etYbsDers" />
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorAccent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"></View>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/rootlayout2"></LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/ortalamaYbsHesapla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/hesapla_btn"
+        android:onClick="ortalamaYbsHesapla" />
+</LinearLayout>

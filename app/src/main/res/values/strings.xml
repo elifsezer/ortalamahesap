@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Ortalama Hesaplama</string>
+    <string name="autocompletetextview">AutoCompleteTextView</string>
+</resources>
